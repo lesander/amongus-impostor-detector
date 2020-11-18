@@ -18,17 +18,20 @@ This module ships with a simple command line interface. See the below
 examples for reference.
 
 Use `tshark -D` to find the interface you want to listen to. Note that
-on Windows, interface names need to be escaped using `\\`.
+on Windows, interface names **do not** need to be escaped using `\\` or quotes.
 
 ```shell
 # listen to live interface eth0
-python cli.py live eth0
+python cli.py --method=live input=eth0
 
 # parse given pcap file
-python cli.py file path/to/file.pcapng
+python cli.py --method=file input=path/to/file.pcapng
 
 # use verbose option for quicker results in live capture
-python cli.py live eth0 -v
+python cli.py --method=live --input=eth0 --verbose
+
+# listen to a live windows adapter
+python cli.py --method=live --input=\Device\ABC_{12345678-1234-5678-1234-123456789012} --verbose
 ```
 
 This module can also be used programmatically.
