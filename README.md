@@ -17,6 +17,9 @@ pip install -r requirements.txt
 This module ships with a simple command line interface. See the below
 examples for reference.
 
+Use `tshark -D` to find the interface you want to listen to. Note that
+on Windows, interface names need to be escaped using `\\`.
+
 ```shell
 # listen to live interface eth0
 python cli.py live eth0
