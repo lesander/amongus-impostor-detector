@@ -11,8 +11,8 @@ from sys import exit
 from detector import Detector
 
 parser = argparse.ArgumentParser(formatter_class=argparse.ArgumentDefaultsHelpFormatter)
-parser.add_argument("method", default="live", help="inspect a live interface or analyze a pcap file [live/file]")
-parser.add_argument("input", default="eth0", help="interface name or file path location")
+parser.add_argument("--method", default="live", required=True, type=str, help="inspect a live interface or analyze a pcap file [live/file]")
+parser.add_argument("--input", default="eth0", required=True, type=str, help="interface name or file path location")
 parser.add_argument("--verbose", "-v", action='store_true', help="show print output from Detector class")
 args = parser.parse_args()
 
@@ -26,4 +26,5 @@ else:
     print(f"Unknown method {args.method}")
     exit(1)
 
-print(detector.get_impostors())
+if args.verbose != True:
+    print(detector.get_impostors())
