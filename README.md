@@ -1,0 +1,1 @@
+# amongus-impostor-detector
