@@ -1,5 +1,7 @@
 # Among Us Impostor(s) Detector
 
+![](image.png)
+
 ## Installing
 This Python 3 module requires [Wireshark or tshark](https://www.wireshark.org/) to be
 installed on the system with the following Lua plugin installed:
