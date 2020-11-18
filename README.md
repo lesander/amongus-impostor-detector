@@ -1,7 +1,7 @@
 # Among Us Impostor(s) Detector
 
 ## Installing
-This module requires [Wireshark or tshark](https://www.wireshark.org/) to be
+This Python 3 module requires [Wireshark or tshark](https://www.wireshark.org/) to be
 installed on the system with the following Lua plugin installed:
 https://github.com/cybershard/wireshark-amongus.
 
