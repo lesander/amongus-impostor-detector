@@ -2,9 +2,11 @@
 <img src="cover.png" width=750>
 
 ## How it works
-Among Us uses plaintext UDP communication and sends all game details to every game client. The used networking library is [a fork of Hazel Networking](https://github.com/willardf/Hazel-Networking). There's also an issue with trust in this networking design, since a game client doesn't or cannot verify if a packet actually originates from the player it says it originates from, but that's out of the scope of this detector. 
+Among Us uses plaintext UDP communication and sends all game details to every game client. The used networking library is [a fork of Hazel Networking](https://github.com/willardf/Hazel-Networking). Among Us game clients also do not or cannot verify if a packet actually originates from the player it says it originates from, but that's out of the scope of this detector. 
 
 This method of networking is insecure by design since a player can control his or her own environment and network. Just because the Among Us client chooses not to display certain information does not mean that we can't access it. 
+
+This script was written mainly to familiarize myself with Among Us' networking protocol and out of curiosity. Can't blame the developers for these security holes really, this game has gotten way out of hand in terms of popularity for just 1-3 developers. Among Us 2 will likely have better networking security in place to prevent this type of network snooping. The current version of Among Us already implements some form of anti-cheat detection to prevent common hacks from ruining the game.
 
 This detector script parses application packets created by [Cybershard's wireshark lua plugin](https://github.com/cybershard/wireshark-amongus) to find the UpdateGameData (RPC=30) packet that is broadcasted at the start of every game containing, among other things, who the impostor(s) of the match will be.
 
