@@ -1,4 +1,11 @@
 # Among Us Impostor(s) Detector
+
+---
+
+⚠️ **Among Us now uses DTLSv1.2 which makes plaintext UDP packet sniffing harder, which is why I'm open-sourcing this UDP sniffing tool.** ⚠️
+
+---
+
 <img src="cover.png" width=750>
 
 ## How it works
